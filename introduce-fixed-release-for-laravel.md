@@ -6,13 +6,13 @@
 
 공식문서에 따르면 라라벨의 버전은 이렇게 알 수 있습니다.
 
-```php
+```sh
 php artisan --version
 ```
 
 방금 컴포져로 업데이트를 했다면 이렇게 나와야 합니다.
 
-```
+```sh
 Laravel Framework 7.9.2
 ```
 
@@ -35,7 +35,7 @@ class Application extends Container implements ApplicationContract, CachesConfig
 
 ```
 
-라라벨 프레임워크의 저장소는 깃헙의 [laravel/framework 저장소](laravel/framework)이며, 패키지스트에도 동일하게 등록되어 있습니다.
+라라벨 프레임워크의 저장소는 깃헙의 [laravel/framework 저장소](https://github.com/laravel/framework)이며, 패키지스트에도 동일하게 등록되어 있습니다.
 
 ## 라라벨을 설치할 때의 버전은 다르다
 
@@ -80,6 +80,6 @@ v7.0.0
 
 누가 라라벨 버전을 몇 쓰는지 물어보신다고요? `php artisan --version`의 값을 이야기하는건 반만 맞습니다. 전 앞으로 이렇게 이야기 하려 합니다.
 
-    라라벨 버전은 7.6.0이고, 프레임워크는 7.9.2 네요!
+    라라벨 버전은 7.6.0 이고, 프레임워크는 7.9.2 네요!
 
 오늘도 즐거운 라라벨 생활 되시기 바랍니다!
