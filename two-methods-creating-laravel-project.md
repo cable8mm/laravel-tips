@@ -6,7 +6,7 @@
 
 우선 라라벨 공식문서에 나오는 내용을 확인해 보죠:
 
-```bash
+```sh
 laravel new blog
 ```
 
@@ -74,7 +74,7 @@ protected function download($zipFile, $version = 'master')
 }
 ```
 
-`laravel new` 커맨드는 깃헙이 아닌, [http://cabinet.laravel.com/](http://cabinet.laravel.com/) 이라는 별도의 저장소에서 가져옵니다.
+`laravel new` 커맨드는 깃헙이 아닌, http://cabinet.laravel.com/ 이라는 별도의 저장소에서 가져옵니다.
 
 그 후 Zip 파일을 다운로드 받고, 간단한 체크를 한 후 `laravel new` 다음에 나오는 문자열로 폴더를 생성해서 그 곳에 압축파일을 풉니다.
 
@@ -82,13 +82,13 @@ protected function download($zipFile, $version = 'master')
 
 ## 방법 2. composer create-project
 
-```bash
+```sh
 composer create-project --prefer-dist laravel/laravel blog
 ```
 
 컴포져의 `create-project` 커맨드가 하는 일은 무엇일까요?
 
-컴포져의 공식문서에 따르면 이 옵션이 하는 일은 git의 clone 혹은 svn의 체크아웃과 하는 일이 완벽히 같다고 합니다. 말하자면, git과 svn의 래퍼\(wrapper\)가 되겠네요.
+컴포져의 공식문서에 따르면 이 옵션이 하는 일은 git의 clone 혹은 svn의 체크아웃과 하는 일이 완벽히 같다고 합니다. 말하자면, git과 svn의 래퍼(wrapper)가 되겠네요.
 
 깃헙을 예로 든다면, 컴포져의 `create-project`를 사용해서 특정 버전을 받는다던지, `stable`한 버전만 받는다던지 하는 일들을 컴포져 명령어로 할 수 있습니다.
 
@@ -96,7 +96,7 @@ composer create-project --prefer-dist laravel/laravel blog
 
 이 명령에 사용할 수 있는 옵션은 이렇습니다:
 
-```text
+```
 --stability (-s): Minimum stability of package. Defaults to stable.
 --prefer-source: Install packages from source when available.
 --prefer-dist: Install packages from dist when available.
@@ -126,4 +126,3 @@ composer create-project --prefer-dist laravel/laravel blog
 무심코 넘어간 부분이라도 이 글이 작게나마 도움이 되었으면 좋겠습니다.
 
 오늘도 행복한 라라벨 생활 되시기 바랍니다.
-

@@ -1,6 +1,4 @@
-# introduce-fixed-release-for-laravel
-
-라라벨의 버전은 7로 넘어오면서 약간 복잡해 진 면이 있습니다. 라라벨 커뮤니티에서도 라라벨 버전이 빠르게 올라가는 것에 대한 막연한 두려움\(?\)도 있는 것 같고요.
+라라벨의 버전은 7로 넘어오면서 약간 복잡해 진 면이 있습니다. 라라벨 커뮤니티에서도 라라벨 버전이 빠르게 올라가는 것에 대한 막연한 두려움(?)도 있는 것 같고요.
 
 이번 글에서는 라라벨의 버전이 무엇을 말하는건지, 그리고 하나의 팁을 알려드리려 합니다.
 
@@ -8,13 +6,13 @@
 
 공식문서에 따르면 라라벨의 버전은 이렇게 알 수 있습니다.
 
-```bash
+```sh
 php artisan --version
 ```
 
 방금 컴포져로 업데이트를 했다면 이렇게 나와야 합니다.
 
-```bash
+```sh
 Laravel Framework 7.9.2
 ```
 
@@ -34,6 +32,7 @@ class Application extends Container implements ApplicationContract, CachesConfig
 
     ...
 }
+
 ```
 
 라라벨 프레임워크의 저장소는 깃헙의 [laravel/framework 저장소](https://github.com/laravel/framework)이며, 패키지스트에도 동일하게 등록되어 있습니다.
@@ -44,7 +43,7 @@ class Application extends Container implements ApplicationContract, CachesConfig
 
 `laravel/laravel`은 라이브러리나 패키지라기 보다는 일종의 보일러플레이트 혹은 스켈레톤 입니다. 프레임워크에 따라서 이 부분을 명시적으로 표기한 것도 있는데요, 대표적으로 [초소형 프레임워크로 알려져있는 Slim 프레임워크](https://github.com/slimphp/Slim-Skeleton)입니다.
 
-```text
+```
 Slim Framework 4 Skeleton Application
 Coverage Status
 
@@ -63,7 +62,7 @@ Use this skeleton application to quickly setup and start working on a new Slim F
 
 `laravel/laravel`의 버전은 깃헙의 tag를 이용하며, 글을 쓰는 현재 등록되어 있는 버전은 아래와 같습니다.
 
-```text
+```
 v7.6.0
 v7.3.0
 v7.0.0
@@ -81,9 +80,6 @@ v7.0.0
 
 누가 라라벨 버전을 몇 쓰는지 물어보신다고요? `php artisan --version`의 값을 이야기하는건 반만 맞습니다. 전 앞으로 이렇게 이야기 하려 합니다.
 
-```text
-라라벨 버전은 7.6.0 이고, 프레임워크는 7.9.2 네요!
-```
+    라라벨 버전은 7.6.0 이고, 프레임워크는 7.9.2 네요!
 
 오늘도 즐거운 라라벨 생활 되시기 바랍니다!
-
