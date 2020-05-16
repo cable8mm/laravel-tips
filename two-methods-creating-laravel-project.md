@@ -17,21 +17,21 @@ laravel new blog
 라라벨 인스톨러는 매우 단순합니다. 심포니의 커맨드 프레임워크를 베이스로 단 [하나의 커맨드](https://github.com/laravel/installer/blob/master/src/NewCommand.php)만 생성하고 있습니다.
 
 ```php
-    /**
-     * Configure the command options.
-     *
-     * @return void
-     */
-    protected function configure()
-    {
-        $this
-            ->setName('new')
-            ->setDescription('Create a new Laravel application')
-            ->addArgument('name', InputArgument::OPTIONAL)
-            ->addOption('dev', null, InputOption::VALUE_NONE, 'Installs the latest "development" release')
-            ->addOption('auth', null, InputOption::VALUE_NONE, 'Installs the Laravel authentication scaffolding')
-            ->addOption('force', 'f', InputOption::VALUE_NONE, 'Forces install even if the directory already exists');
-    }
+/**
+* Configure the command options.
+*
+* @return void
+*/
+protected function configure()
+{
+    $this
+        ->setName('new')
+        ->setDescription('Create a new Laravel application')
+        ->addArgument('name', InputArgument::OPTIONAL)
+        ->addOption('dev', null, InputOption::VALUE_NONE, 'Installs the latest "development" release')
+        ->addOption('auth', null, InputOption::VALUE_NONE, 'Installs the Laravel authentication scaffolding')
+        ->addOption('force', 'f', InputOption::VALUE_NONE, 'Forces install even if the directory already exists');
+}
 ```
 
 위의 코드로 추론해 볼 수 있는건 커맨드 이름은 `new`이며, 옵션으로 `dev`, `auth`, `force`를 사용할 수 있습니다.
@@ -45,33 +45,33 @@ laravel new blog
 다음의 코드를 살펴보시죠:
 
 ```php
-    /**
-     * Download the temporary Zip to the given file.
-     *
-     * @param  string  $zipFile
-     * @param  string  $version
-     * @return $this
-     */
-    protected function download($zipFile, $version = 'master')
-    {
-        switch ($version) {
-            case 'develop':
-                $filename = 'latest-develop.zip';
-                break;
-            case 'auth':
-                $filename = 'latest-auth.zip';
-                break;
-            case 'master':
-                $filename = 'latest.zip';
-                break;
-        }
-
-        $response = (new Client)->get('http://cabinet.laravel.com/'.$filename);
-
-        file_put_contents($zipFile, $response->getBody());
-
-        return $this;
+/**
+* Download the temporary Zip to the given file.
+*
+* @param  string  $zipFile
+* @param  string  $version
+* @return $this
+*/
+protected function download($zipFile, $version = 'master')
+{
+    switch ($version) {
+        case 'develop':
+            $filename = 'latest-develop.zip';
+            break;
+        case 'auth':
+            $filename = 'latest-auth.zip';
+            break;
+        case 'master':
+            $filename = 'latest.zip';
+            break;
     }
+
+    $response = (new Client)->get('http://cabinet.laravel.com/'.$filename);
+
+    file_put_contents($zipFile, $response->getBody());
+
+    return $this;
+}
 ```
 
 `laravel new` 커맨드는 깃헙이 아닌, http://cabinet.laravel.com/ 이라는 별도의 저장소에서 가져옵니다.
