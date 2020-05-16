@@ -84,4 +84,6 @@ releases 디렉토리:
 
 저희가 실제로 배포한 `Envoyer` 화면을 공유해 드립니다.
 
+![실제 배포 후의 화면](resources/how-to-deploy-zero-time-in-envoyer/1.png)
+
 오늘도 즐거운 라라벨 되시기 바랍니다.
