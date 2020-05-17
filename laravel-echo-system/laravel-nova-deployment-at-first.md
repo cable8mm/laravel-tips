@@ -1,4 +1,4 @@
-# 라라벨 노바의 Envoyer 배포의 실전
+# 라라벨 노바의 Envoyer 배포 실전
 
 라라벨 노바가 현재의 시스템과 같은 프로젝트에서 운용할 수 있다는 구조적인 잇점 때문에 적극적으로 사용해 보려고 시도하는 중 첫번째 난관에 부딪혔습니다. 바로 `Envoyer` 배포에서 말이죠.
 
@@ -85,4 +85,3 @@ rsync -arvuz --exclude=".gitignore" /local_project_path/storage/app/public/ sshi
 5. `Envoyer`로 배포한 후 `Slack`으로 배포 알람 세팅
 6. (런칭 전까지) 깃헙 푸쉬 시 자동 배포 옵션 활성화
 ```
-
