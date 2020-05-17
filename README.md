@@ -21,8 +21,8 @@ define('ISSUE', 'Issues');
 define('PR', 'Pull requests');
 
 if($client->hasQuestion()) {
-    return $client->send(ISSUE)->to('cable8mm/laravel-tips');
+    return $client->send(ISSUE)->to('cable8mm/laravel-tips.git');
 }
 
-$client->send(PR)->to('cable8mm/laravel-tips');
+$client->send(PR)->to('cable8mm/laravel-tips.git');
 ```
