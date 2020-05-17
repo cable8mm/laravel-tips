@@ -8,7 +8,7 @@
 
 라라벨 노바는 상용 소스입니다. 소스는 공식 웹사이트의 Release에서 다운로드를 받을 수도 있고 컴포져로 받을 수도 있습니다. 라라벨 사용자라면 컴포져를 선호할 텐데요, 처음 컴포져로 받을 때는 커맨드를 이용한 인증을 하게 됩니다. 한번 인증하면 업데이트를 할 때는 별도의 인증을 거치지 않습니다.
 
-```javascript
+```json
 "repositories": [
     {
         "type": "composer",
@@ -23,7 +23,7 @@
 
 노바를 배포하기 전 다음과 같은 순서로 인증을 하면 `auth.json`파일 만으로 배포할 때 컴포져 인스톨에서 라라벨 노바의 인증을 통과할 수 있습니다.
 
-```bash
+```sh
 composer config http-basic.nova.laravel.com ${NOVA_USERNAME} ${NOVA_PASSWORD}
 ```
 
@@ -31,7 +31,7 @@ composer config http-basic.nova.laravel.com ${NOVA_USERNAME} ${NOVA_PASSWORD}
 
 ## 배포 후 뜨는 404 화면
 
-로컬에서 개발한 후 서버로 배포를 하게 되면 모든 페이지가 404 에러 화면으로 보이게 됩니다. 그리고, 디버거나 로그파일에 아무것도 남지 않습니다. 그건 라라벨 노바에서 기본으로 제공하는 Gate 때문입니다. 이 Gate는 로컬환경에서는 적용되지 않고, 로컬환경이 아닐때만 적용이 됩니다.\(`.env`파일의 `APP_ENV` 값을 따라갑니다.\)
+로컬에서 개발한 후 서버로 배포를 하게 되면 모든 페이지가 404 에러 화면으로 보이게 됩니다. 그리고, 디버거나 로그파일에 아무것도 남지 않습니다. 그건 라라벨 노바에서 기본으로 제공하는 Gate 때문입니다. 이 Gate는 로컬환경에서는 적용되지 않고, 로컬환경이 아닐때만 적용이 됩니다.(`.env`파일의 `APP_ENV` 값을 따라갑니다.)
 
 라라벨 노바의 `app/Providers/NovaServiceProvider.php` 파일에는 아래와 같이 노바를 볼 수 있는 이메일을 작성하는 코드가 있습니다.
 
@@ -65,7 +65,7 @@ protected function gate()
 
 원래대로라면 코드를 배포한 후 운영자가 이미지를 올려야 겠지만, 저처럼 실데이터를 이용해서 미리 데이터를 등록해 두는 개발자라면 다음과 같이 rsync를 이용해서 업로드한 이미지를 실서버에 올릴 수 있습니다.
 
-```bash
+```sh
 rsync -arvuz --exclude=".gitignore" /local_project_path/storage/app/public/ sshid@1.2.3.4:/server_path/current/storage/app/public
 ```
 
@@ -73,11 +73,11 @@ rsync -arvuz --exclude=".gitignore" /local_project_path/storage/app/public/ sshi
 
 ## 배포 요약
 
-실제로 라라벨 노바 배포에 있어서의 문제는 이 정도입니다. [라라벨 노바의 Install 문서](https://nova.laravel.com/docs/3.0/installation.html)를 꼼꼼히 확인했다면 하지 않아도 될 시행착오가 대부분이었습니다.\(라라벨은 정말 공문을 세세히 봐야 하는 것 같습니다.\)
+실제로 라라벨 노바 배포에 있어서의 문제는 이 정도입니다. [라라벨 노바의 Install 문서](https://nova.laravel.com/docs/3.0/installation.html)를 꼼꼼히 확인했다면 하지 않아도 될 시행착오가 대부분이었습니다.(라라벨은 정말 공문을 세세히 봐야 하는 것 같습니다.)
 
 전체적인 프로젝트 진행 순서를 알려드리며 여기서 마치겠습니다.
 
-```text
+```
 1. `valet`을 이용하여 개발환경을 구성하고 `laravel new` 커맨드로 프로젝트 시작
 2. 라라벨 노바를 구입하고, 컴포져를 이용해서 설치 후 개발 시작
 3. 깃헙 팀 무료버전에 Private 저장소를 만들고, 개발된 코드를 푸쉬(`.env`의 배포버전인 `.env.production`은 별도로 제작 후 함께 푸쉬)
@@ -85,4 +85,3 @@ rsync -arvuz --exclude=".gitignore" /local_project_path/storage/app/public/ sshi
 5. `Envoyer`로 배포한 후 `Slack`으로 배포 알람 세팅
 6. (런칭 전까지) 깃헙 푸쉬 시 자동 배포 옵션 활성화
 ```
-
