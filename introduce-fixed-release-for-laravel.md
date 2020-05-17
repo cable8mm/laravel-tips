@@ -34,7 +34,6 @@ class Application extends Container implements ApplicationContract, CachesConfig
 
     ...
 }
-
 ```
 
 라라벨 프레임워크의 저장소는 깃헙의 [laravel/framework 저장소](https://github.com/laravel/framework)이며, 패키지스트에도 동일하게 등록되어 있습니다.
@@ -45,12 +44,10 @@ class Application extends Container implements ApplicationContract, CachesConfig
 
 `laravel/laravel`은 라이브러리나 패키지라기 보다는 일종의 보일러플레이트 혹은 스켈레톤 입니다. 프레임워크에 따라서 이 부분을 명시적으로 표기한 것도 있는데요, 대표적으로 [초소형 프레임워크로 알려져있는 Slim 프레임워크](https://github.com/slimphp/Slim-Skeleton)입니다.
 
-```
-Slim Framework 4 Skeleton Application
-Coverage Status
+    Slim Framework 4 Skeleton Application
+    Coverage Status
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation. It also uses the Monolog logger.
-```
+    Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation. It also uses the Monolog logger.
 
 위의 설명에서 `Skeleton`이라는 표현을 볼 수 있습니다.
 
@@ -64,11 +61,9 @@ Use this skeleton application to quickly setup and start working on a new Slim F
 
 `laravel/laravel`의 버전은 깃헙의 tag를 이용하며, 글을 쓰는 현재 등록되어 있는 버전은 아래와 같습니다.
 
-```
-v7.6.0
-v7.3.0
-v7.0.0
-```
+    v7.6.0
+    v7.3.0
+    v7.0.0
 
 깃헙이 제공하는 Compare changes를 보면 [v7.0.0과 v7.3.0과의 비교](https://github.com/laravel/laravel/compare/v7.3.0...master)에서는 총 19개 커밋과 12개의 파일이 수정되었다고 나옵니다. [v7.6.0과의 비교](https://github.com/laravel/laravel/compare/v7.0.0...v7.6.0)에서는 28개의 커밋과 13개의 파일이 수정되었다고 나오죠.
 
