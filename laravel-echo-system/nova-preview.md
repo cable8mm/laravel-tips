@@ -36,6 +36,8 @@
 라라벨 노바도 마찬가지로 리소스에 모델과 콘트롤러, 뷰에 필요한 것들을 정의하는 것만으로 어드민 대시보드를 제작할 수 있게 디자인 되었습니다. 이해가 쉽도록 라라벨 노바에서 제공하는 빌트인 리소스인 User 리소스를 몇개로 나누어 보겠습니다. 글이 다소 길어지겠지만, 리소스 전체 코드를 리뷰하는 것이 도움이 될 것이라 생각합니다.
 
 ```php
+
+<?php
 class User extends Resource
 {
     /**
@@ -68,6 +70,7 @@ User 리소스에서는 모델을 지정하고, 타이틀과 검색해야 되는
 
 ```php
 <?php
+
 /**
 * Get the fields displayed by the resource.
 *
@@ -105,6 +108,7 @@ fields 메쏘드는 화면에 노출할 필드와 폼 타입 그리고 밸리데
 
 ```php
 <?php
+
 Text::make('Name')
     ->sortable()
     ->rules('required', 'max:255'),
@@ -118,6 +122,7 @@ Text::make('Name')
 
 ```php
 <?php
+
 /**
 * Get the cards available for the request.
 *

@@ -21,6 +21,8 @@ Laravel Framework 7.9.2
 우리가 흔히 알고 있는 라라벨의 버전은 라라벨 프레임워크의 버전이며, [Allication.php 파일](https://github.com/laravel/framework/blob/7.x/src/Illuminate/Foundation/Application.php)에 아래와 같이 선언되어 있습니다.
 
 ```php
+<?php
+
 // 경로 : vendor/laravel/framework/illuminate/Foundation/Application.php
 
 class Application extends Container implements ApplicationContract, CachesConfiguration, CachesRoutes, HttpKernelInterface
@@ -86,4 +88,3 @@ v7.0.0
 ```
 
 오늘도 즐거운 라라벨 생활 되시기 바랍니다!
-

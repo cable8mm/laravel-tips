@@ -36,6 +36,8 @@ composer config http-basic.nova.laravel.com ${NOVA_USERNAME} ${NOVA_PASSWORD}
 라라벨 노바의 `app/Providers/NovaServiceProvider.php` 파일에는 아래와 같이 노바를 볼 수 있는 이메일을 작성하는 코드가 있습니다.
 
 ```php
+<?php
+
 protected function gate()
 {
     Gate::define('viewNova', function ($user) {
@@ -49,6 +51,8 @@ protected function gate()
 이 코드를 다음과 같이 수정합니다.
 
 ```php
+<?php
+
 protected function gate()
 {
     Gate::define('viewNova', function ($user) {

@@ -17,6 +17,8 @@ laravel new blog
 라라벨 인스톨러는 매우 단순합니다. 심포니의 커맨드 프레임워크를 베이스로 단 [하나의 커맨드](https://github.com/laravel/installer/blob/master/src/NewCommand.php)만 생성하고 있습니다.
 
 ```php
+<?php
+
 /**
 * Configure the command options.
 *
@@ -45,6 +47,8 @@ protected function configure()
 다음의 코드를 살펴보시죠:
 
 ```php
+<?php
+
 /**
 * Download the temporary Zip to the given file.
 *
@@ -126,4 +130,3 @@ composer create-project --prefer-dist laravel/laravel blog
 무심코 넘어간 부분이라도 이 글이 작게나마 도움이 되었으면 좋겠습니다.
 
 오늘도 행복한 라라벨 생활 되시기 바랍니다.
-
