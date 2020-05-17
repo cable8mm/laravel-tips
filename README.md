@@ -15,7 +15,7 @@ For edit or write articles :
 ```php
 <?php
 
-if(is_question()) {
+if($client->hasQuestion()) {
     $client->send('issue')->to('cable8mm/laravel-tips');
     return;
 }
