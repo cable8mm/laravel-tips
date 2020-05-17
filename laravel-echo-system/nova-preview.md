@@ -4,8 +4,8 @@
 
 전 지금까지 서비스를 제작할 때 프론트를 라라벨로, 운영툴을 케이크PHP를 사용해 왔습니다. 케이크PHP는 Rapid를 지향하는 PHP 프레임워크 중 가장 오래되었고 그만큼 완성도가 높습니다. 하지만, 프론트와 어드민을 별도의 프로젝트로 제작할 때 생기는 피로감이 존재합니다.
 
-1. 어느 한 쪽에서 제작한 코드를 다른 프로젝트에서 사용해야 할 때 공통 코드가 두번 들어갈 수 있다.
-2. 어느 한 쪽의 큐/잡 프로세스를 관리할 통일된 개발 방법론을 찾기가 힘들다.
+    1. 어느 한 쪽에서 제작한 코드를 다른 프로젝트에서 사용해야 할 때 공통 코드가 두번 들어갈 수 있다.
+    2. 어느 한 쪽의 큐/잡 프로세스를 관리할 통일된 개발 방법론을 찾기가 힘들다.
 
 1번의 경우에 전 Composer 기반으로 코드를 작성하는 것으로 해결하고 있지만, 2번의 경우는 해결 방법이 딱히 떠오르지 않고, 큐/잡을 위한 별도의 프로젝트를 만들기에는 부담이 컸습니다.
 
@@ -25,9 +25,9 @@
 
 라라벨 노바는 이 부분을 이렇게 해결하고 있습니다.
 
-1. 콘트롤러 없음
-2. 뷰 없음
-3. 모델은 기존에 제작된 것을 이용하거나 artisan 커맨드로 나온 그대로 작동
+    1. 콘트롤러 없음
+    2. 뷰 없음
+    3. 모델은 기존에 제작된 것을 이용하거나 artisan 커맨드로 나온 그대로 작동
 
 이런 마법같은 일을 하는건 바로 리소스\(Resource\)입니다.
 
@@ -39,63 +39,64 @@
 class User extends Resource
 {
     /**
-     * The model the resource corresponds to.
-     *
-     * @var string
-     */
+    * The model the resource corresponds to.
+    *
+    * @var string
+    */
     public static $model = 'App\\User';
 
     /**
-     * The single value that should be used to represent the resource when being displayed.
-     *
-     * @var string
-     */
+    * The single value that should be used to represent the resource when being displayed.
+    *
+    * @var string
+    */
     public static $title = 'name';
 
     /**
-     * The columns that should be searched.
-     *
-     * @var array
-     */
+    * The columns that should be searched.
+    *
+    * @var array
+    */
     public static $search = [
         'id', 'name', 'email',
     ];
 
-    ...
+...
 ```
 
 User 리소스에서는 모델을 지정하고, 타이틀과 검색해야 되는 필드를 지정합니다. 이 것만으로 라라벨 노바는 앱에 타이틀과 검색창이 표현됩니다.
 
 ```php
-    /**
-     * Get the fields displayed by the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function fields(Request $request)
-    {
-        return [
-            ID::make()->sortable(),
+<?php
+/**
+* Get the fields displayed by the resource.
+*
+* @param  \Illuminate\Http\Request  $request
+* @return array
+*/
+public function fields(Request $request)
+{
+    return [
+        ID::make()->sortable(),
 
-            Gravatar::make(),
+        Gravatar::make(),
 
-            Text::make('Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
+        Text::make('Name')
+            ->sortable()
+            ->rules('required', 'max:255'),
 
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
+        Text::make('Email')
+            ->sortable()
+            ->rules('required', 'email', 'max:254')
+            ->creationRules('unique:users,email')
+            ->updateRules('unique:users,email,{{resourceId}}'),
 
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
-        ];
-    }
+        Password::make('Password')
+            ->onlyOnForms()
+            ->creationRules('required', 'string', 'min:8')
+            ->updateRules('nullable', 'string', 'min:8'),
+    ];
+}
 ```
 
 fields 메쏘드는 화면에 노출할 필드와 폼 타입 그리고 밸리데이션 등을 선언합니다.
@@ -103,9 +104,10 @@ fields 메쏘드는 화면에 노출할 필드와 폼 타입 그리고 밸리데
 예를 들어서,
 
 ```php
-            Text::make('Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
+<?php
+Text::make('Name')
+    ->sortable()
+    ->rules('required', 'max:255'),
 ```
 
 이 코드는 HTML에서 폼타입으로 text를 사용하고, 필수입력되어야 하며, 최대 사이즈가 255자이어야 하며, 소팅기능을 제공합니다. 물론 필드 이름은 name이 됩니다.
@@ -115,49 +117,50 @@ fields 메쏘드는 화면에 노출할 필드와 폼 타입 그리고 밸리데
 라라벨 노바로 CRUD만을 제작한다면 여기까지만 해도 충분히 사용할 수 있지만, 세상은 쉬운 일이 없더군요. 그래서, 라라벨 노바는 추가로 다음의 메쏘드를 제공하고 있습니다.
 
 ```php
-    /**
-     * Get the cards available for the request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function cards(Request $request)
-    {
-        return [];
-    }
+<?php
+/**
+* Get the cards available for the request.
+*
+* @param  \Illuminate\Http\Request  $request
+* @return array
+*/
+public function cards(Request $request)
+{
+    return [];
+}
 
-    /**
-     * Get the filters available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function filters(Request $request)
-    {
-        return [];
-    }
+/**
+* Get the filters available for the resource.
+*
+* @param  \Illuminate\Http\Request  $request
+* @return array
+*/
+public function filters(Request $request)
+{
+    return [];
+}
 
-    /**
-     * Get the lenses available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function lenses(Request $request)
-    {
-        return [];
-    }
+/**
+* Get the lenses available for the resource.
+*
+* @param  \Illuminate\Http\Request  $request
+* @return array
+*/
+public function lenses(Request $request)
+{
+    return [];
+}
 
-    /**
-     * Get the actions available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function actions(Request $request)
-    {
-        return [];
-    }
+/**
+* Get the actions available for the resource.
+*
+* @param  \Illuminate\Http\Request  $request
+* @return array
+*/
+public function actions(Request $request)
+{
+    return [];
+}
 ```
 
 필터와 액션은 쉽게 검색과 버튼을 만들 수 있게 해 줍니다. 이 부분은 간단하지만, 이 글의 범위 밖에 있기 때문에 자세히 설명하지는 않겠습니다.
@@ -191,4 +194,3 @@ fields 메쏘드는 화면에 노출할 필드와 폼 타입 그리고 밸리데
 잊지 마세요. 여러분은 단 한줄의 콘트롤러 코드도, 뷰 코드도 쓸 수 없습니다. 오롯이 리소스파일과 패키지만으로 개발을 해야 한다는걸 말이죠.
 
 다음 글에서는 이번 글을 더 쉽게 파악할 수 있도록 스크린샷 위주로 구성해 보겠습니다.
-
