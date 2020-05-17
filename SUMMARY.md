@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Table](README.md)
+* [Introduction](README.md)
 * [라라벨 개발자를 위한 .aliases 파일](.aliases-for-laravel-developer.md)
 * [Envoyer에서 무중단 배포를 구현하는 방법](how-to-deploy-zero-time-in-envoyer.md)
 * [introduce-fixed-release-for-laravel](introduce-fixed-release-for-laravel.md)
