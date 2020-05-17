@@ -17,10 +17,12 @@ For edit or write articles :
 ```php
 <?php
 
+define('ISSUE', 'Issues');
+define('PR', 'Pull requests');
+
 if($client->hasQuestion()) {
-    $client->send('issue')->to('cable8mm/laravel-tips');
-    return;
+    return $client->send(ISSUE)->to('cable8mm/laravel-tips');
 }
 
-$client->send('PR')->to('cable8mm/laravel-tips');
+$client->send(PR)->to('cable8mm/laravel-tips');
 ```
