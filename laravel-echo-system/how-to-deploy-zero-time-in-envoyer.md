@@ -89,7 +89,7 @@ releases 디렉토리:
 
 저희가 실제로 배포한 `Envoyer` 화면을 공유해 드립니다.
 
-![&#xC2E4;&#xC81C; &#xBC30;&#xD3EC; &#xD6C4;&#xC758; &#xD654;&#xBA74;](.gitbook/assets/1.png)
+![&#xC2E4;&#xC81C; &#xBC30;&#xD3EC; &#xD6C4;&#xC758; &#xD654;&#xBA74;](../.gitbook/assets/1.png)
 
 오늘도 즐거운 라라벨 되시기 바랍니다.
 
