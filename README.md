@@ -9,7 +9,7 @@ For read in convenient :
 ```php
 <?php
 
-return redirect('https://cable8mm.gitbook.com');
+return redirect('https://laravel.palgle.com');
 ```
 
 For edit or write articles :
