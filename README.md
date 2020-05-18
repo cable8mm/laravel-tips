@@ -9,7 +9,7 @@ For read in convenient :
 ```php
 <?php
 
-Route::redirect()->away('/', 'https://laravel.palgle.com');
+Route::redirect('/')->away('https://laravel.palgle.com');
 ```
 
 For edit or write articles :
