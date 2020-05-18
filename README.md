@@ -9,7 +9,7 @@ For read in convenient :
 ```php
 <?php
 
-return redirect('https://laravel.palgle.com');
+Route::redirect()->away('/', 'https://laravel.palgle.com');
 ```
 
 For edit or write articles :
@@ -17,12 +17,8 @@ For edit or write articles :
 ```php
 <?php
 
-define('ISSUE', 'Issues');
-define('PR', 'Pull requests');
-
-if($client->hasQuestion()) {
-    return $client->send(ISSUE)->to('cable8mm/laravel-tips.git');
-}
-
-$client->send(PR)->to('cable8mm/laravel-tips.git');
+Route::middleware('auth:love-laravel')->group(function () {
+    Route::redirect('/question', '/cable8mm/laravel-tips/issues');
+    Route::redirect('/edit-or-write', '/cable8mm/laravel-tips/pulls');
+});
 ```
