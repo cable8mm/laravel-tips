@@ -130,3 +130,4 @@ composer create-project --prefer-dist laravel/laravel blog
 무심코 넘어간 부분이라도 이 글이 작게나마 도움이 되었으면 좋겠습니다.
 
 오늘도 행복한 라라벨 생활 되시기 바랍니다.
+

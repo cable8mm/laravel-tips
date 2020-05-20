@@ -22,3 +22,4 @@ Route::middleware('auth:love-laravel')->group(function () {
     Route::redirect('/edit-or-write', '/cable8mm/laravel-tips/pulls');
 });
 ```
+
