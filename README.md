@@ -4,7 +4,7 @@ description: 라라벨 생활의 소소한 이야기와 팁
 
 # Introduction
 
-For read in convenient :
+For read in convenient : [Gitbook](https://laravel.palgle.com)
 
 ```php
 <?php
@@ -12,7 +12,7 @@ For read in convenient :
 Route::redirect('/')->away('https://laravel.palgle.com');
 ```
 
-For edit or write articles :
+For edit or write articles : [Github](https://github.com/cable8mm/laravel-tips)
 
 ```php
 <?php
