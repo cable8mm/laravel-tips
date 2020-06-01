@@ -60,7 +60,7 @@ $currency = '₩' . number_format(10000);
 ```php
 <?php
 
-echo (new NumberFormatter('ko_KR', NumberFormatter::CURRENCY))
+$currency =  (new NumberFormatter('ko_KR', NumberFormatter::CURRENCY))
     ->format(10000);
 
 // $currency = ₩10,000
