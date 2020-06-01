@@ -34,10 +34,10 @@ NumberFormatter는 PHP에만 있는 것은 아니고, 정규표현식처럼 많�
 
 | Language or Framework      | Class or Object         |
 | :------------------------- | :---------------------- |
-| PHP                        | NSNumberFormatter Class |
+| PHP                        | NumberFormatter Class   |
 | Apple Foundation Framework | NSNumberFormatter Class |
-| Java                       | NSNumberFormatter Class |
-| Spring Framework           | NSNumberFormatter Class |
+| Java                       | NumberFormatter Class   |
+| Spring Framework           | NumberFormatter Class   |
 | Python                     | locale.format           |
 | Javascript                 | Intl.NumberFormat       |
 
