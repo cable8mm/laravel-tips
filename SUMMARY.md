@@ -7,6 +7,7 @@
 - [라라벨 노바 훑어보기](laravel-echo-system/nova-preview.md)
 - [라라벨 노바의 Envoyer 배포의 실전](laravel-echo-system/laravel-nova-deployment-at-first.md)
 - [Envoyer에서 무중단 배포를 구현하는 방법](laravel-echo-system/how-to-deploy-zero-time-in-envoyer.md)
+- [E국제화의 필수 익스텐션, NumberFormatter](laravel-echo-system/about-number-formatter.md)
 
 ## 개발 팁 <a id="development-tips"></a>
 
