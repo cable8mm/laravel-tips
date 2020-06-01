@@ -48,6 +48,8 @@ NumberFormatter는 숫자를 표현하는 방식에 로케일과 통화를 합�
 NumberFormatter를 사용하지 않을 경우 이런 코드를 작성하게 됩니다.
 
 ```php
+<?php
+
 $currency = '₩' . number_format(10000);
 
 // $currency = ₩10,000
@@ -67,6 +69,8 @@ echo (new NumberFormatter('ko_KR', NumberFormatter::CURRENCY))
 어, NumberFormatter가 더 복잡해 보이는군요. 그러면 이 코드는 어떨까요?
 
 ```php
+<?php
+
 echo number2hangul(12345);
 
 // http://www.nuno21.net/bbs/board.php?bo_table=php&wr_id=2419
@@ -93,7 +97,7 @@ function number2hangul($number) {
 }
 
 // output
-// 십만이천삼백사십오
+// 일만이천삼백사십오
 ```
 
 이 코드를 이렇게 쓸 수 있습니다.
