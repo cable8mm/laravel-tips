@@ -10,7 +10,7 @@
 
 한국판 `Cashier` 제작을 위한 기본 지식으로 우리는 `NumberFormatter`에 대해서 알아야 합니다.
 
-## Cashier 공식 문서에서의 제약
+## Cashier 공식 문서에서의 제약.
 
 [Cashier 매뉴얼의 설정](https://laravel.com/docs/7.x/billing#configuration)을 보면 아래와 같은 문구가 있습니다.
 
