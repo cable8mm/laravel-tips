@@ -10,6 +10,7 @@
 
 ## 개발 팁 <a id="development-tips"></a>
 
+- [라라벨이 애용하는 ::class 톺아보기](development-tips/about-magic-constant-colon-colon-class.md)
 - [라라벨에서의 버전의 의미](development-tips/introduce-fixed-release-for-laravel.md)
 - [라라벨 개발자를 위한 .aliases 파일](development-tips/.aliases-for-laravel-developer.md)
 - [라라벨 프로젝트를 만드는 두가지 방법 비교](development-tips/two-methods-creating-laravel-project.md)
