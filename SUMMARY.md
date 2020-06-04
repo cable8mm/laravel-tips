@@ -17,4 +17,7 @@
 - [PHP 스크립트를 php 명령어 없이 사용하는 법](development-tips/how-to-use-php-cli-without-extension.md)
 - [E국제화의 필수 익스텐션, NumberFormatter](development-tips/about-number-formatter.md)
 
+## Knowledge Acquisition <a id="knowledge-acquisition"></a>
+- [Error 혹은 Warning](knowledge-acquisition/error-or-warning.md)
+
 ## Latest
