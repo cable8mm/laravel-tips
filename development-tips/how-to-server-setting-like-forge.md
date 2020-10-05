@@ -77,7 +77,7 @@ Group forge
 사용되는 코드의 디렉토리 전체를 forge:forge로 바꾸어 주고, apache를 재시작합니다.
 
 ```console
-chmod -R forge:forge /home/someone/project_folder
+chown -R forge:forge /home/someone/project_folder
 
 service httpd restart
 ```
