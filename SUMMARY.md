@@ -10,6 +10,7 @@
 
 ## 개발 팁 <a id="development-tips"></a>
 
+- [퍼미션 에러없이 PHP를 구동하기 위한 서버 세팅법](development-tips/how-to-server-setting-like-forge.md)
 - [라라벨이 애용하는 ::class 톺아보기](development-tips/about-magic-constant-colon-colon-class.md)
 - [라라벨에서의 버전의 의미](development-tips/introduce-fixed-release-for-laravel.md)
 - [라라벨 개발자를 위한 .aliases 파일](development-tips/.aliases-for-laravel-developer.md)
@@ -19,6 +20,7 @@
 - [라라벨에서 뷰헬퍼를 만들어 봅시다](development-tips/how-to-make-view-helper.md)
 
 ## Knowledge Acquisition <a id="knowledge-acquisition"></a>
+
 - [Error 혹은 Warning](knowledge-acquisition/error-or-warning.md)
 
 ## Latest
