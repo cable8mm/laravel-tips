@@ -21,7 +21,7 @@ composer require phpunit/phpunit --dev
 
 ## 맥 업데이트 후 "gpg: WARNING: no command supplied"
 
-맵을 업데이트하고 `gpg: WARNING: no command supplied` 워닝이 나오고 푸쉬가 되지 않을 때에는 이렇게 해 본다.
+맥을 업데이트하고 `gpg: WARNING: no command supplied` 워닝이 나오고 푸쉬가 되지 않을 때에는 이렇게 해 본다.
 
 ```bash
 git config --global gpg.program "/usr/local/bin/gpg"
