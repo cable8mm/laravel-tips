@@ -6,7 +6,7 @@
 
 라라벨 인스톨러의 최신버전(v4.x)에서는 `laravel new`와 `composer create-project`로 만들어지는 프로젝트의 차이가 없어졌습니다.
 
-`laravel new`로 생성할 경우 `composer create-project`로 우선 생성 후 퍼미션과 .env파일 그리고 제트스트림 처리까지 해 주시 때문에 신규 프로젝트 생성에는 `laravel new`를 사용하는 것을 강하게 추천합니다.
+`laravel new`로 생성할 경우 `composer create-project`로 우선 생성 후 퍼미션과 .env파일 그리고 제트스트림 처리까지 해 주기 때문에 신규 프로젝트 생성에는 `laravel new`를 사용하는 것을 강하게 추천합니다.
 
 아래의 내용은 라라벨 인스톨러 v3.x에 해당되는 내용입니다.
 
