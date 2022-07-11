@@ -4,6 +4,7 @@
 
 ## 라라벨 생태계 <a id="laravel-echo-system"></a>
 
+- [라라벨 발렛(Laravel Valet)에서 Node 실행하기](laravel-echo-system/node-and-valet.md)
 - [라라벨 노바 훑어보기](laravel-echo-system/nova-preview.md)
 - [라라벨 노바의 Envoyer 배포의 실전](laravel-echo-system/laravel-nova-deployment-at-first.md)
 - [Envoyer에서 무중단 배포를 구현하는 방법](laravel-echo-system/how-to-deploy-zero-time-in-envoyer.md)
