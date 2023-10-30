@@ -23,5 +23,7 @@
 ## Knowledge Acquisition <a id="knowledge-acquisition"></a>
 
 - [Error 혹은 Warning](knowledge-acquisition/error-or-warning.md)
-
-## Latest
+- [NumberFormatter class example](knowledge-acquisition/number-formatter.md)
+- [Exception + Error = Throwable Tree in PHP 7 over](knowledge-acquisition/throwable-tree.md)
+- [Coding Style Preset](knowledge-acquisition/coding-style-preset.md)
+- [Programming Case Types](knowledge-acquisition/programming-case-types.md)
