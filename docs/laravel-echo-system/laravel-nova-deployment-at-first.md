@@ -87,4 +87,3 @@ rsync -arvuz --exclude=".gitignore" /local_project_path/storage/app/public/ sshi
 4. `Envoyer`에 깃헙 주소를 등록하고, 깃헙의 권한을 조정
 5. `Envoyer`로 배포한 후 `Slack`으로 배포 알람 세팅
 6. \(런칭 전까지\) 깃헙 푸쉬 시 자동 배포 옵션 활성화
-

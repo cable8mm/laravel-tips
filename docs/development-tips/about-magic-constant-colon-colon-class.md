@@ -49,7 +49,7 @@ var_dump(NumberFormat::class);
 
 말하자면, 'NumberFormat'이라는 문자열과 NumberFormat::class는 완벽히 같습니다! 네임스페이스가 있다면 네임스페이스까지 나옵니다.
 
-## Try!
+## Try\
 
 그럼 몇가지 실험을 해 보죠.
 
@@ -164,7 +164,7 @@ echo (new A)->a() . PHP_EOL;
 
 trait에서도 잘 작동하는 것을 알 수 있습니다.
 
-## 다시 라라벨로...
+## 다시 라라벨로
 
 라라벨의 코드를 리뷰 해 보면 클래스의 FQN을 얻기 위해서 거의 모든 코드에는 `::class`를 사용하고 있습니다.
 

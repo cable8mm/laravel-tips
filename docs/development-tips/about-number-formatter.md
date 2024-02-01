@@ -10,19 +10,15 @@
 
 한국판 `Cashier` 제작을 위한 기본 지식으로 우리는 `NumberFormatter`에 대해서 알아야 합니다.
 
-## Cashier 공식 문서에서의 제약.
+## Cashier 공식 문서에서의 제약
 
 [Cashier 매뉴얼의 설정](https://laravel.com/docs/7.x/billing#configuration)을 보면 아래와 같은 문구가 있습니다.
 
-```
-... Internally, Cashier utilizes PHP's NumberFormatter class to set the currency locale:
-```
+> ... Internally, Cashier utilizes PHP's NumberFormatter class to set the currency locale:
 
 그리고,
 
-```
-{tip} In order to use locales other than en, ensure the ext-intl PHP extension is installed and configured on your server.
-```
+> {tip} In order to use locales other than en, ensure the ext-intl PHP extension is installed and configured on your server.
 
 `en` 이외의 로케일을 지원하기 위해서 `ext-intl`을 설치해야 한다고 합니다. [NumberFormatter class](https://www.php.net/manual/en/class.numberformatter.php)는 [ext-intl 익스텐션](https://www.php.net/manual/en/book.intl.php)에 포함되어 있기 때문입니다.
 
@@ -114,7 +110,7 @@ echo (new NumberFormatter('ko_KR', NumberFormatter::SPELLOUT))
 
 코드의 간결성은 둘째치고, 전세계 모든 언어(Language)를 동일한 인터페이스로 코딩한다는 것이 큰 장점이 됩니다.
 
-## 마치며...
+## 마치며
 
 라라벨의 에코시스템을 한국에서도 모두 쓸 수 있도록 노력하고 있으며, 그 과정에 나오는 이슈를 가끔은 이런 식으로 공유하겠습니다. :)
 

@@ -10,9 +10,9 @@
 
 만약 CentOS와 아파치를 이용한다면, 기본적으로 `apache:apache`로 구동이 됩니다. 반면 소스는 다음과 같은 계정으로 구동이 됩니다.
 
-    1. [user]: users
-    2. [user]:[user]
-    3. root
+1. \[user\]: users
+2. \[user\]:\[user\]
+3. root
 
 1번은 CentOS를 설치할 때 만드는 계정으로 users 그룹은 `users:x:100:`으로 선언되어 있으며, 시스템 계정입니다.
 
@@ -22,10 +22,10 @@
 
 정리하면 웹서버에 파일을 만드는 계정은 총 네가지로 구분할 수 있습니다.
 
-    1. [user]: users
-    2. [user]:[user]
-    3. root
-    4. apache:apache
+ 1. \[user\]: users
+ 2. \[user\]:\[user\]
+ 3. root
+ 4. apache:apache
 
 ## 어떤 문제가 생길까
 
@@ -45,9 +45,7 @@
 
 forge는 OS를 설치할 때 생성하는 계정이 아니라 OS 설치 후에 별도로 만들어지는 일반 계정입니다.
 
-```
-라라벨 포지를 통해서 AWS EC2를 세팅한다면, root, ubuntu, forge 이렇게 세개의 계정이 만들어 집니다.
-```
+> 라라벨 포지를 통해서 AWS EC2를 세팅한다면, root, ubuntu, forge 이렇게 세개의 계정이 만들어 집니다.
 
 ## CentOS + Apache 조합일 때 해결책
 
