@@ -32,7 +32,7 @@ echo 'run php script!' . PHP_EOL;
 run php script!
 ```
 
-## #!
+## \#\!(Shabang)
 
 가장 먼저 나오는 `#!`은 Sharp(#)+Bang(!)의 합성어로 [shabang, sha-bang, hashbang, pound-bang, hash-pling 등](<https://en.wikipedia.org/wiki/Shebang_(Unix)>)으로 읽습니다.
 
@@ -48,7 +48,7 @@ run php script!
 
 `env`의 또 다른 기능인 `env + 언어`를 사용하면 그 언어의 실행파일을 실행할 수 있습니다.
 
-```
+```sh
 ➜ env php --version
 PHP 7.3.14 (cli) (built: Jan 24 2020 03:04:31) ( NTS )
 Copyright (c) 1997-2018 The PHP Group

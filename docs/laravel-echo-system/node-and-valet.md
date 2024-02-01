@@ -10,7 +10,7 @@ mkdir node
 valet secure
 ```
 
-간단한 커맨드 만으로 Valet은 브라우져에서 https://node.test 로 접속을 할 수 있게 만들어 줍니다.
+간단한 커맨드 만으로 Valet은 브라우져에서 <https://node.test> 로 접속을 할 수 있게 만들어 줍니다.
 
 이 상태에서 Node를 실행하는 방법은 간단합니다.
 
@@ -61,7 +61,7 @@ location / {
 server_name node.test www.node.test *.node.test;
 ```
 
-그 후에 `valet restart` 커맨드를 실행하면 https://node.test 로 접속을 하면 http://127.0.0.1:3000 으로 접속됩니다.(proxy_pass)
+그 후에 `valet restart` 커맨드를 실행하면 <https://node.test> 로 접속을 하면 <http://127.0.0.1:3000> 으로 접속됩니다.(proxy_pass)
 
 자, 이제 간단한 node로 웹서버를 띄웁니다.
 
@@ -79,7 +79,7 @@ http
 
 이제 위의 코드를 `index.js`로 저장한 후 `node index.js` 명령어로 실행합니다.
 
-브라우져에 https://node.test 를 입력하면 Hello World를 볼 수 있습니다!
+브라우져에 <https://node.test> 를 입력하면 Hello World를 볼 수 있습니다!
 
 다음은 `node.test` 설정파일 전문입니다.
 

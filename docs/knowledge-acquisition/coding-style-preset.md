@@ -2,7 +2,7 @@
 
 ## General
 
-- [Spatie's General PHP Rules](https://guidelines.spatie.be/code-style/laravel-php#general-php-rules)
+- [Spatie's General PHP Rules](https://spatie.be/guidelines/laravel-php#content-general-php-rules)
 
 ## php-cs-fixer
 

@@ -1,0 +1,14 @@
+name: Markdown Validate
+
+on: [push]
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: DavidAnson/markdownlint-cli2-action@v15
+        continue-on-error: true
+        with:
+          config: ".markdownlint.json"
+          globs: "docs/**/*.md"

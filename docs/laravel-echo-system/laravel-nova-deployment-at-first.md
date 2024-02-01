@@ -77,7 +77,7 @@ rsync -arvuz --exclude=".gitignore" /local_project_path/storage/app/public/ sshi
 
 ## 배포 요약
 
-실제로 라라벨 노바 배포에 있어서의 문제는 이 정도입니다. [라라벨 노바의 Install 문서](https://nova.laravel.com/docs/3.0/installation.html)를 꼼꼼히 확인했다면 하지 않아도 될 시행착오가 대부분이었습니다.\(라라벨은 정말 공문을 세세히 봐야 하는 것 같습니다.\)
+실제로 라라벨 노바 배포에 있어서의 문제는 이 정도입니다. [라라벨 노바의 Install 문서](https://nova.laravel.com/docs/installation.html)를 꼼꼼히 확인했다면 하지 않아도 될 시행착오가 대부분이었습니다.\(라라벨은 정말 공문을 세세히 봐야 하는 것 같습니다.\)
 
 전체적인 프로젝트 진행 순서를 알려드리며 여기서 마치겠습니다.
 
@@ -87,4 +87,3 @@ rsync -arvuz --exclude=".gitignore" /local_project_path/storage/app/public/ sshi
 4. `Envoyer`에 깃헙 주소를 등록하고, 깃헙의 권한을 조정
 5. `Envoyer`로 배포한 후 `Slack`으로 배포 알람 세팅
 6. \(런칭 전까지\) 깃헙 푸쉬 시 자동 배포 옵션 활성화
-

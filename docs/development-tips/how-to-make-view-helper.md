@@ -1,4 +1,4 @@
-# 라라벨에서 뷰헬퍼를 만들어 봅시다.
+# 라라벨에서 뷰헬퍼를 만들어 봅시다
 
 전통적인 MVC 프레임워크에서는 뷰에서 사용할 수 있는 뷰헬퍼 클래스를 확장하는 규격을 제공하고 있습니다.
 
@@ -25,7 +25,7 @@ public function boot()
 
 커스텀 블레이드 패키지 중 가장 많은 스타(709개)를 받은 [appstract/laravel-blade-directives](https://github.com/appstract/laravel-blade-directives) 패키지의 테스트 코드를 보면 실제로 넣는 코드에 비해서 테스트 코드가 매우 비대하다는 걸 알 수 있습니다.
 
-![블레이드 커스텀 패키지의 테스트 디렉토리](../.gitbook/assets/blade-test-directories.png)
+![블레이드 커스텀 패키지의 테스트 디렉토리](../../.gitbook/assets/blade-test-directories.png)
 
 ## app 폴더 밑에 helpers.php 파일 만들기
 
@@ -72,7 +72,7 @@ public function boot()
  }
 ```
 
-위의 [컴포져 내용](https://github.com/esc-company/view-transformer/blob/master/composer.json)은 실제로 [사내 프로젝트에 적용중인 패키지](https://github.com/esc-company/view-transformer)의 일부입니다.
+위의 [컴포져 내용](https://github.com/esc-company/view-transformer/blob/main/composer.json)은 실제로 [사내 프로젝트에 적용중인 패키지](https://github.com/esc-company/view-transformer)의 일부입니다.
 
 뷰헬퍼가 뷰 이외의 공간에서 사용되지 못하게 하는 방법은 없기 때문에, 저는 클래스 위에 Helper를 붙여서 뷰헬퍼 이외의 용도로는 사용하지 못하게 작은 컨벤션 규격을 만들었습니다.
 
