@@ -2,11 +2,11 @@
 description: 라라벨 생활의 소소한 이야기와 팁
 ---
 
-This repository have merged https://github.com/cable8mm/stack. Please to visit new repository or https://stack.palgle.com
+This repository have merged [https://github.com/cable8mm/stack](https://github.com/cable8mm/stack). Please to visit new repository or [https://stack.palgle.com](https://stack.palgle.com)
 
 It have been archiving forever. Thank you for all.
 
-이 레포지토리는 https://github.com/cable8mm/stack 와 머지되었습니다. 부디 새로운 레포지토리나 https://stack.palgle.com 으로 오셔서 새로운 콘텐츠를 즐기시기 바랍니다.
+이 레포지토리는 [https://github.com/cable8mm/stack](https://github.com/cable8mm/stack) 와 머지되었습니다. 부디 새로운 레포지토리나 [https://stack.palgle.com](https://stack.palgle.com) 으로 오셔서 새로운 콘텐츠를 즐기시기 바랍니다.
 
 본 레포지토리는 아카이빙 됩니다. 갑사합니다.
 
