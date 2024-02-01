@@ -23,7 +23,7 @@ For read in convenient : [Gitbook](https://laravel.palgle.com)
 ```php
 <?php
 
-Route::redirect('/')->away('https://laravel.palgle.com');
+Route::redirect('/')->away('https://stack.palgle.com');
 ```
 
 For edit or write articles : [Github](https://github.com/cable8mm/laravel-tips)
@@ -32,8 +32,8 @@ For edit or write articles : [Github](https://github.com/cable8mm/laravel-tips)
 <?php
 
 Route::middleware('auth:love-laravel')->group(function () {
-    Route::redirect('/question', '/cable8mm/laravel-tips/issues');
-    Route::redirect('/edit-or-write', '/cable8mm/laravel-tips/pulls');
+    Route::redirect('/question', '/cable8mm/stack/issues');
+    Route::redirect('/edit-or-write', '/cable8mm/stack/pulls');
 });
 ```
 
