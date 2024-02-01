@@ -1,6 +1,6 @@
 # 국제화의 필수 익스텐션, NumberFormatter
 
-![라라벨 Cashier 로고](../.gitbook/assets/laravel-cashier-logo.png)
+![라라벨 Cashier 로고](../../.gitbook/assets/laravel-cashier-logo.png)
 
 라라벨의 에코시스템 중에서 `Cashier`를 사용하시는 분은 많지 않을 것 같습니다. 그 이유는 `Cashier`는 라라벨 에코시스템 중 유일하게 사용 업체가 지정되어야 하기 때문입니다.
 
@@ -120,6 +120,6 @@ echo (new NumberFormatter('ko_KR', NumberFormatter::SPELLOUT))
 
 NumberFormatter로 나오는 모든 출력물은 아래의 주소에서 확인할 수 있습니다.
 
-[NumberFormatter 예재](https://github.com/cable8mm/inside-php/blob/master/docs/NumberFormatter.md)
+[NumberFormatter 예재](../knowledge-acquisition/number-formatter.md)
 
 오늘도 좋은 라라벨 생활 되시기 바랍니다.
